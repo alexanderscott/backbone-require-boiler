@@ -1,0 +1,16 @@
+//=============================================================//
+//                  Icons & spritesheets
+//=============================================================//
+
+// Sprite configuration for compass
+$icon-social-sprite-dimensions: true;
+$icon-social-clean-up: true;
+
+.icon-social-sprite {                     // All sprites will extend this class
+    display:inline-block;
+}
+
+@import "icons/icon-social/*.png";
+/* */
+@include all-icon-social-sprites;       // Will include classes for icon-social-*
+
