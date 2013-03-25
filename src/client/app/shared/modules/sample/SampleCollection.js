@@ -9,7 +9,7 @@ define([
     'SampleModel'
 ], function(app, SampleModel) {
 
-    var SampleCollection = Backbone.Collection.extend({
+    app.SampleCollection = Backbone.Collection.extend({
         //model: SampleModel,
 
         initialize: function(models, options) { },
@@ -41,6 +41,6 @@ define([
 
     });
 
-    return SampleCollection;
+    return app.SampleCollection;
 });
 

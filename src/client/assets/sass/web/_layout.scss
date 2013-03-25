@@ -1,0 +1,72 @@
+//=============================================================//
+//                  LAYOUT - WEB
+//=============================================================//
+
+@import "bootstrap-sass/_grid";
+
+html, body {
+  height:100%;
+}
+body {
+    margin: 0;
+    font-family: $baseFontFamily;
+    width: 100%;
+    font-family: $baseFontFamily;
+    font-size: $baseFontSize;
+    line-height: $baseLineHeight;
+    color: $textColor;
+    background-color: $bodyBackground;
+}
+
+/*=== Float Containment and Bug Fixes (Do Not Alter These!) ===*/
+body:before {/*Opera min-height 100% Fix*/
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;/*eliminate need for inner non clearing element*/
+}
+#wrapper:after, /*#wrapper:after for IE8 min-height:100% Fix*/
+#content:after {/*#content:after for Float Containment*/
+    clear:both;
+    content:"";
+    display:block;
+    height:1%;/*fix IE8 min-height:100% bug*/
+    font-size:0;
+}
+
+/*===  Begin Layout Structure ===*/
+#wrapper {
+    margin:auto;
+    min-height:100%;
+    margin-top:-51px;/*reclaim footer height and pull the wrapper through top of viewport*/
+} 
+#navbar-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 320px;
+    height: $navbarHeight;
+    padding: 0;
+    margin: 0 0 20px 0;
+    box-shadow: 0 -8px 5px 10px rgba(0,0,0,.1);
+    border-bottom: 1px solid #221f1c;
+    z-index: $zindexFixedNavbar;
+}
+#content {
+    padding-bottom: 50px;
+    min-height:500px;
+}
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: $footerHeight;
+    margin-top: $footerHeight;
+}
+
+.footer.footer-launch {
+    width:100%;
+    text-align: center;
+}

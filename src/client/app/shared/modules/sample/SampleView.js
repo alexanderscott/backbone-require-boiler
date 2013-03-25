@@ -12,7 +12,7 @@ define([
 ],
 function(app, SampleModel, SampleCollection, SampleTpl){
 
-    var ActivityListView = Backbone.View.extend({
+    app.ActivityListView = Backbone.View.extend({
 
         initialize: function(options){
             _.bindAll(this);
@@ -34,6 +34,6 @@ function(app, SampleModel, SampleCollection, SampleTpl){
 
     });
 
-    return ActivityListView;
+    return app.ActivityListView;
 });
 

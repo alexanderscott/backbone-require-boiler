@@ -1,0 +1,82 @@
+//=============================================================//
+//                  TEXT - SHARED
+//=============================================================//
+
+/* Open Sans - Google Web Fonts */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+/*
+ * ENTYPO FONT CHARS
+ */
+
+// Entypo pictograms by Daniel Bruce — www.entypo.com 
+@font-face {
+    font-family: "Entypo";
+    src: url("#{$fontPath}/entypo.eot");
+    src: url("#{$fontPath}/entypo.eot?#iefix") format("embedded-opentype"),
+         url("#{$fontPath}/entypo.woff") format("woff"),
+         url("#{$fontPath}/entypo.ttf") format("truetype"),
+         url("#{$fontPath}/entypo.svg#Entypo") format("svg");
+    font-weight: 100;
+    font-style: normal;
+    /*-webkit-font-smoothing: antialiased;     [> light txt on dark bg looks better <]*/
+    /*text-shadow: 0 1px 0 rgba(0,0,0,0.01);*/
+}
+
+@font-face {
+    font-family: "EntypoSocial";
+    src: url("#{$fontPath}/entypo-social.eot");
+    src: url("#{$fontPath}/entypo-social.eot?#iefix") format("embedded-opentype"),
+         url("#{$fontPath}/entypo-social.woff") format("woff"),
+         url("#{$fontPath}/entypo-social.ttf") format("truetype"),
+         url("#{$fontPath}/entypo-social.svg#EntypoSocial") format("svg");
+    font-weight: 100;
+    font-style: normal;
+}
+
+.opensans {
+    font-family: $headingsFontFamily;
+}
+
+.entypo {
+    font-family: 'Entypo';
+    font-weight: 100;
+    display:inline-block;
+    /*font-size: 20px;*/
+}
+.entypo-social {
+    font-family: 'EntypoSocial';
+    font-weight: 100;
+    /*font-size: 20px;*/
+}
+
+.entypo-large {
+    @extend .entypo;
+    font-size: 30px;
+    width: 17px;
+    height:17px;
+}
+
+
+// HTML Character icons
+[data-icon-entypo]:before {
+    font-family: "Entypo","EntypoSocial";
+    font-weight: 100;
+    content: attr(data-icon);
+}
+
+[class^="icon-entypo"]:before,
+[class*=" icon-entypo"]:before {
+    font-family: 'Entypo', 'EntypoSocial';
+    font-style: normal;
+    font-weight: 100;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: 0.2em;
+    text-align: center;
+    opacity: 0.8;
+}
+
+

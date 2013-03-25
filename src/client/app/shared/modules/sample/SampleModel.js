@@ -6,7 +6,7 @@
 
 define(['app'], function(app) {
 
-    var SampleModel = Backbone.Model.extend({
+    app.SampleModel = Backbone.Model.extend({
 
         initialize: function(options){
             this.validators = {};
@@ -23,6 +23,6 @@ define(['app'], function(app) {
 
     });
 
-    return SampleModel;
+    return app.SampleModel;
 });
 
